@@ -18,7 +18,7 @@ for caracter in secreto:
     else:
         pista.append(letra)
 
-turnos= 2 * len(secreto) 
+turnos= 2 * len(secreto)  #10
 while turnos!=0 and "".join(pista) != secreto:
     print("".join(pista))
     adivina = input("Ingrese una letra: ").lower()#E
@@ -28,18 +28,16 @@ while turnos!=0 and "".join(pista) != secreto:
             if adivina == letraSecreto:
                 #E--O-E
                 pista[i] = adivina
-    turnos-=1        
-            
+    turnos-=1   #turnos = turnos - 1   
 
+if "".join(pista) == secreto:
+    print("Ganó")
+else:
+    print("Perdió")
 
+empleo= (2 * len(secreto)) - turnos
+print("Turnos que empleó:",empleo )
 
-
-        
-
-#ESPOL
-
-#P
-#--PO-
 
 
 
